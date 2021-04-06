@@ -1,0 +1,159 @@
+:root{
+    /* Palheta de cores*/
+    --facebook: #3b5998;
+    --twitter: #00acee;
+    --google: #db4437;
+    --dark-olive: #606C38 ;
+    --kombu: #283618 ;
+    --cornsilk: #FEFAE0 ;
+    --fawn: #DDA15E ;
+    --liver: #BC6C25 ;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+a, ul{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    font-size: 12px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--kombu); 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+    width: 50%;
+    height: 70%;
+    background-color: var(--cornsilk);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* FIRST COLUMN */
+
+.links{
+    background-color: var(--fawn);
+    grid-column: 1 / 2;
+}
+
+nav, ul{
+    width: 100%;
+    height: 100%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    width: 80%;
+    padding: .8rem;
+    margin: .5rem 0;
+}
+.li-twitter{background-color: var(--twitter);}
+.li-facebook{background-color: var(--facebook);}
+.li-google{background-color: var(--google);}
+
+/* SECOND COLUMN */
+
+.login{
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-rows: auto repeat(3, 1fr); 
+}
+
+.container-p{
+    grid-row: 1 / 2;
+}
+
+p{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.container-form{
+    grid-row: 2 / -1;
+    padding: 0 1.5rem;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+.email, .password, button{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--liver);
+    color: white;
+}
+
+.forgot, label{
+    color: black;
+}
+
+.forgot{
+    display: inline-block;
+    text-align: left;
+}
+
+input[type=checkbox]{
+    transform: scale(1.5);
+    margin-left: 10px;
+}
+
+input::placeholder, button{
+    font-family: 'DotGothic16', sans-serif;  
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 800px){
+    .container{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--cornsilk);
+    }
+}
+
+
+
+
+
+
+
+
+
+
